@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+
+<style>
+.card {
+	margin: auto;
+	width: 400px;
+	height: 500px;
+	background-color: grey;
+	border-radius: 20px;
+}
+
+.card>form {
+	margin-left: 30px;
+}
+
+.card>form>label {
+	padding: 5px;
+}
+
+input {
+	width: 300px;
+	height: 30px;
+	border-radius: 15px;
+	font-size: 18px;
+	outline: 0px;
+	border: 0px;
+	margin-top: 15px;
+	opacity: 0.2px;
+	outline: 0px;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+input::focus {
+	outline: none;
+}
+
+label {
+	display: block;
+	font-size: 25px;
+}
+</style>
+</head>
+<body>
+	<div class="card">
+		<h2 style="text: center;">Customer Register From</h2>
+		<form action="register">
+			<label>Name</label> <input id="name" type="text" name="name" /> <label>Email</label><input
+				type="text" id="email" name="email" /> <label>Phone</label> <input
+				id="phone" type="text" name="phone" /> <label>Gender</label> <input
+				type="text" name="gender" id="gender" /> <label> </label> <input
+				class="btn" type="submit" /> <input class="btn" type="reset"
+				value="reset" />
+		</form>
+	</div>
+</body>
+<script>
+	function check() {
+		var name = document.querySelector("#name").value;
+		var email = document.querySelector("#email").value;
+		var phone = document.querySelector("#phone").value;
+		var gender = document.querySelector("#gender").value;
+		if (name == "") {
+			window.alert("Enter name");
+			return false;
+		}
+		if (email == "") {
+			window.alert("Enter email");
+			return false;
+		}
+		if (phone == "") {
+			window.alert("Enter phone");
+			return false;
+		}
+		if (gender == "") {
+			window.alert("Enter gender");
+			return false
+		}
+		return true;
+
+	};
+</script>
+</html>
